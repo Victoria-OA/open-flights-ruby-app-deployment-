@@ -9,7 +9,7 @@ spec:
   type: git
   params:
     - name: revision
-      value: main  # or master depending on your branch
+      value: main 
     - name: url
       value: https://github.com/Victoria-OA/test.git
 
