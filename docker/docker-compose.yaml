@@ -1,4 +1,6 @@
 # Docker Compose Configuration
+# apply with "docker-compose build"
+# "docker-compose up" to view on localhost
 
 version: '3.7'
 
