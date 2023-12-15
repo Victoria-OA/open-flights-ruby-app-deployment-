@@ -1,0 +1,10 @@
+# Tekton PipelineRun Configuration for Open Flights
+#Apply the configuration with edited environment variables using the command: kubectl apply -f pipelinerun.yaml."
+
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: open-flights
+spec:
+  pipelineRef:
+    name: open-flights

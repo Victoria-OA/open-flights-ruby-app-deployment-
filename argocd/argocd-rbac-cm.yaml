@@ -1,3 +1,7 @@
+# ArgoCD RBAC Configurations
+# ConfigMap for RBAC Policy
+#Apply the configuration using the command: kubectl apply -f argocd-rbac-cm.yaml."
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

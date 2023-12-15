@@ -1,4 +1,4 @@
-#open-flights app
+# dockerfile for ruby app-web-open-flights app
 # define the Ruby base image 
 FROM ruby:2.6-buster
 

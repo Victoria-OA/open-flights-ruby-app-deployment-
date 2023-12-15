@@ -1,3 +1,6 @@
+# Git Repository Resource for Open Flights
+#Apply the configuration with edited environment variables using the command: kubectl apply -f pipelineresources.yaml."
+
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
@@ -11,6 +14,7 @@ spec:
       value: https://github.com/Victoria-OA/test.git
 
 --- 
+# Docker Image Resource for Web
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
@@ -22,6 +26,7 @@ spec:
     value: oluwasanmivic123/docker_web:latest
 
 --- 
+# Docker Image Resource for Database
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
@@ -31,4 +36,3 @@ spec:
   params:
   - name: url
     value: oluwasanmivic123/docker_db:latest
-

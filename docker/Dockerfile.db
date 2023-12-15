@@ -1,3 +1,6 @@
+# Dockerfile for PostgreSQL 15
+# ---------------------------
+
 # Use an official PostgreSQL base image with version 15
 FROM postgres:15
 

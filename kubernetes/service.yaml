@@ -1,3 +1,5 @@
+# Service for Ruby App
+#Apply the configuration using the command: kubectl apply -f service.yaml."
 apiVersion: v1
 kind: Service
 metadata:

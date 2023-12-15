@@ -1,3 +1,7 @@
+# ArgoCD Configurations
+#Apply the configuration using the command: kubectl apply -f argocd-cm.yaml."
+
+# ConfigMap for Repository Information
 apiVersion: v1
 kind: ConfigMap
 metadata:

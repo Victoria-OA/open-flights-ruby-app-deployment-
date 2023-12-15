@@ -1,3 +1,6 @@
+# Tekton Pipeline Configuration for Open Flights
+#Apply the configurationusing the command: kubectl apply -f pipeline.yaml."
+
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:

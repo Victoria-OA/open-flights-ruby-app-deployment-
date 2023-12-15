@@ -1,6 +1,9 @@
+# Docker Compose Configuration
+
 version: '3.7'
 
 services:
+  # Web Service
   web:
     build:
       context: .
@@ -12,6 +15,7 @@ services:
     environment:
       - DATABASE_URL=postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@db:5432/$POSTGRES_DB
 
+  # Database Service
   db:
     build:
       context: .
@@ -23,5 +27,6 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
+# Volumes
 volumes:
   db-data:

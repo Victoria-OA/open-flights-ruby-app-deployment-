@@ -1,3 +1,6 @@
+# ArgoCD Application Configuration for Open Flights
+#Apply the configuration the command: kubectl apply -f argocd-application.yaml."
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:

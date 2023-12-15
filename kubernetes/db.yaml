@@ -1,3 +1,6 @@
+#  PostgreSQL
+#Apply the configuration with edited environment variables using the command: kubectl apply -f db.yaml."
+
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
