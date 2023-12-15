@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: open-flights
+spec:
+  tasks:
+  - name: build-task
+    taskRef:
+      name: build-task
+    params:
+    - name: DOCKER_IMAGE
+      value: oluwasanmivic123/docker_web:latest
+    - name: DOCKERFILE_PATH
+      value: "/workspace/source/docker/Dockerfile.web"  
+
+  - name: build-task-2
+    taskRef:
+      name: build-task
+    params:
+    - name: DOCKER_IMAGE
+      value: oluwasanmivic123/docker_db:latest
+    - name: DOCKERFILE_PATH
+      value: "/workspace/source/docker/Dockerfile.db"  

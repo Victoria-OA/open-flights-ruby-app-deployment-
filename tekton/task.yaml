@@ -1,0 +1,52 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: build-task
+spec:
+  params:
+  - name: DOCKER_IMAGE
+    description: "Docker image name with tag"
+    type: string
+  - name: DOCKERFILE_PATH
+    description: "Path to the Dockerfile"
+    type: string
+    default: "/workspace/source"  # Adjusted default path
+  steps:
+  - name: build-and-push-web
+    image: gcr.io/kaniko-project/executor:latest
+    env:
+    - name: "DOCKER_USERNAME"
+      valueFrom:
+        secretKeyRef:
+          name: docker-secret
+          key: username
+    - name: "DOCKER_PASSWORD"
+      valueFrom:
+        secretKeyRef:
+          name: docker-secret
+          key: password
+    command:
+    - /kaniko/executor
+    args:
+    - "--context=dir:///workspace/source"
+    - "--dockerfile=$(params.DOCKERFILE_PATH)/Dockerfile.web"  # Adjusted Dockerfile path
+    - "--destination=$(params.DOCKER_IMAGE)"
+  - name: build-and-push-db
+    image: gcr.io/kaniko-project/executor:latest
+    env:
+    - name: "DOCKER_USERNAME"
+      valueFrom:
+        secretKeyRef:
+          name: docker-secret
+          key: username
+    - name: "DOCKER_PASSWORD"
+      valueFrom:
+        secretKeyRef:
+          name: docker-secret
+          key: password
+    command:
+    - /kaniko/executor
+    args:
+    - "--context=dir:///workspace/source"
+    - "--dockerfile=$(params.DOCKERFILE_PATH)/Dockerfile.db"  # Adjusted Dockerfile path
+    - "--destination=$(params.DOCKER_IMAGE)"
