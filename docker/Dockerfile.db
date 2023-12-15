@@ -1,4 +1,16 @@
+#create env variables for the containerization on the terminal with the command below
+
+
+##############################################################
+### kubectl create secret generic postgres-credentials \ #######
+###  --from-literal=POSTGRES_USER=your_username \        #######
+###  --from-literal=POSTGRES_PASSWORD=your_password \    #######
+###  --from-literal=POSTGRES_DB=your_database            #######
+##############################################################
+
+
 # Dockerfile for PostgreSQL 15
+
 # ---------------------------
 
 # Use an official PostgreSQL base image with version 15
@@ -16,3 +28,4 @@ ENV POSTGRES_DB=$POSTGRES_DB
 
 # Expose the default PostgreSQL port
 EXPOSE 5432
+
