@@ -1,7 +1,33 @@
+# DEPLOYMENT OF A RUBY APP//Open-Flights
+
+Brief project description or introduction.
+Table of Contents
+
+    Overview
+    DOCKER
+        Step 1: Creating Environment Variables for PostgreSQL
+        Step 2: Dockerfiles
+        Step 3: Docker Compose Configuration
+    KUBERNETES
+        PostgreSQL StatefulSet Configuration (db.yaml)
+        PostgreSQL Secret Configuration (secret.yaml)
+        Ruby App Service Configuration (service.yaml)
+        Ruby App Deployment Configuration (web.yaml)
+    TEKTON
+        Tekton Pipeline Configuration (pipeline.yaml)
+        Tekton Pipeline Resources Configuration (pipelineresources.yaml)
+        Tekton PipelineRun Configuration (pipelinerun.yaml)
+        Tekton Task Configuration (task.yaml)
+    ArgoCD
+        ArgoCD Application Configuration (argocd-application.yaml)
+        ArgoCD Configurations (argocd-cm.yaml and argocd-rbac-cm.yaml)
+        ArgoCD Secret Configuration (argocd-secret.yaml)
+        Kubernetes Secret for Docker Authentication (docker-secret.yaml)
+    Conclusion
 ## Overview
 ### This repository contains configurations and resources for setting up a DevOps environment using Kubernetes, ArgoCD, Tekton, and Docker. Below are the detailed configurations and commands for each component
 
-                                                            ## DOCKER
+## DOCKER
 ### This section contains the Docker configuration files for setting up a Ruby on Rails application with PostgreSQL using Docker Compose. The setup includes creating environment variables for PostgreSQL credentials, Dockerfiles for PostgreSQL and the Rails application, as well as a Docker Compose configuration to orchestrate the services.
 
 ## Step 1: Creating Environment Variables for PostgreSQL
