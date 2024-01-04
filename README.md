@@ -1,29 +1,28 @@
 # DEPLOYMENT OF A RUBY APP//Open-Flights
 
-Brief project description or introduction.
-Table of Contents
+### Table of Contents
+- [Overview](#overview)
+- [DOCKER](#docker)
+  - [Step 1: Creating Environment Variables for PostgreSQL](#step-1-creating-environment-variables-for-postgresql)
+  - [Step 2: Dockerfiles](#step-2-dockerfiles)
+  - [Step 3: Docker Compose Configuration](#step-3-docker-compose-configuration)
+- [KUBERNETES](#kubernetes)
+  - [PostgreSQL StatefulSet Configuration (db.yaml)](#postgresql-statefulset-configuration-dbyaml)
+  - [PostgreSQL Secret Configuration (secret.yaml)](#postgresql-secret-configuration-secretyaml)
+  - [Ruby App Service Configuration (service.yaml)](#ruby-app-service-configuration-serviceyaml)
+  - [Ruby App Deployment Configuration (web.yaml)](#ruby-app-deployment-configuration-webyaml)
+- [TEKTON](#tekton)
+  - [Tekton Pipeline Configuration (pipeline.yaml)](#tekton-pipeline-configuration-pipelineyaml)
+  - [Tekton Pipeline Resources Configuration (pipelineresources.yaml)](#tekton-pipeline-resources-configuration-pipelineresourcesyaml)
+  - [Tekton PipelineRun Configuration (pipelinerun.yaml)](#tekton-pipelinerun-configuration-pipelinerunyaml)
+  - [Tekton Task Configuration (task.yaml)](#tekton-task-configuration-taskyaml)
+- [ArgoCD](#argocd)
+  - [ArgoCD Application Configuration (argocd-application.yaml)](#argocd-application-configuration-argocd-applicationyaml)
+  - [ArgoCD Configurations (argocd-cm.yaml and argocd-rbac-cm.yaml)](#argocd-configurations-argocd-cmyaml-and-argocd-rbac-cmyaml)
+  - [ArgoCD Secret Configuration (argocd-secret.yaml)](#argocd-secret-configuration-argocd-secretyaml)
+  - [Kubernetes Secret for Docker Authentication (docker-secret.yaml)](#kubernetes-secret-for-docker-authentication-docker-secretyaml)
+- [Conclusion](#conclusion)
 
-    Overview
-    DOCKER
-        Step 1: Creating Environment Variables for PostgreSQL
-        Step 2: Dockerfiles
-        Step 3: Docker Compose Configuration
-    KUBERNETES
-        PostgreSQL StatefulSet Configuration (db.yaml)
-        PostgreSQL Secret Configuration (secret.yaml)
-        Ruby App Service Configuration (service.yaml)
-        Ruby App Deployment Configuration (web.yaml)
-    TEKTON
-        Tekton Pipeline Configuration (pipeline.yaml)
-        Tekton Pipeline Resources Configuration (pipelineresources.yaml)
-        Tekton PipelineRun Configuration (pipelinerun.yaml)
-        Tekton Task Configuration (task.yaml)
-    ArgoCD
-        ArgoCD Application Configuration (argocd-application.yaml)
-        ArgoCD Configurations (argocd-cm.yaml and argocd-rbac-cm.yaml)
-        ArgoCD Secret Configuration (argocd-secret.yaml)
-        Kubernetes Secret for Docker Authentication (docker-secret.yaml)
-    Conclusion
 ## Overview
 ### This repository contains configurations and resources for setting up a DevOps environment using Kubernetes, ArgoCD, Tekton, and Docker. Below are the detailed configurations and commands for each component
 
