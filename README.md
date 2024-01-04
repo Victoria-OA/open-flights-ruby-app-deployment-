@@ -1,4 +1,8 @@
 # DEPLOYMENT OF A RUBY APP//Open-Flights
+```
+link to the live demo of the project--- https://drive.google.com/drive/folders/17_3npp8QbSq8vKWixF0K1Ddwj1KHKcuI?usp=drive_link
+
+```
 
 ### Table of Contents
 - [Overview](#overview)
@@ -27,7 +31,7 @@
 ### This repository contains configurations and resources for setting up a DevOps environment using Kubernetes, ArgoCD, Tekton, and Docker. Below are the detailed configurations and commands for each component
 
 ## DOCKER
-### This section contains the Docker configuration files for setting up a Ruby on Rails application with PostgreSQL using Docker Compose. The setup includes creating environment variables for PostgreSQL credentials, Dockerfiles for PostgreSQL and the Rails application, as well as a Docker Compose configuration to orchestrate the services.
+#### This section contains the Docker configuration files for setting up a Ruby on Rails application with PostgreSQL using Docker Compose. The setup includes creating environment variables for PostgreSQL credentials, Dockerfiles for PostgreSQL and the Rails application, as well as a Docker Compose configuration to orchestrate the services.
 
 ## Step 1: Creating Environment Variables for PostgreSQL
 ### To create environment variables for PostgreSQL in the terminal, use the following command:
@@ -62,6 +66,8 @@ docker-compose up
 This command will start the web and db services, making the Rails application available at http://localhost:3000.
 
 ## KUBERNETES
+#### This section contains the Kubernetes configuration files for deploying and managing a Ruby on Rails application with PostgreSQL using Kubernetes resources. The setup includes defining resources such as StatefulSets, Services, Deployments, and Secrets to orchestrate the deployment and operation of the application.
+
 ### PostgreSQL StatefulSet Configuration (db.yaml)
 The db.yaml file contains the StatefulSet configuration for PostgreSQL. StatefulSet ensures stable, unique network identifiers, and persistent storage for PostgreSQL.
 
@@ -92,6 +98,8 @@ kubectl apply -f web.yaml
 ```
 
 ## TEKTON
+#### This section contains the Tekton configurations for building and deploying applications using Tekton Pipelines.
+
 ### Tekton Pipeline Configuration (pipeline.yaml)
 The pipeline.yaml file contains the Tekton Pipeline configuration for the Open Flights project.
 
@@ -121,6 +129,7 @@ Apply the configuration:
 kubectl apply -f task.yaml
 ```
 ## ArgoCD
+#### This section contains the ArgoCD configurations for deploying and managing applications using GitOps principles with ArgoCD.
 ### ArgoCD Application Configuration (argocd-application.yaml)
 The argocd-application.yaml file contains the ArgoCD Application configuration for the Open Flights project.
 
