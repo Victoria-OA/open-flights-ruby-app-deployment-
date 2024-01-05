@@ -1,6 +1,6 @@
 # DEPLOYMENT OF A RUBY APP//Open-Flights
 
-[Demo Drive-link](https://drive.google.com/drive/folders/17_3npp8QbSq8vKWixF0K1Ddwj1KHKcuI?usp=drive_link)
+[Demo video Drive-link](https://drive.google.com/drive/folders/17_3npp8QbSq8vKWixF0K1Ddwj1KHKcuI?usp=drive_link)
 
 ### Table of Contents
 - [Overview](#overview)
